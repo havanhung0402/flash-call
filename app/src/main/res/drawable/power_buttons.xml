@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:maxLevel="0">
+        <selector
+            android:constantSize="true"
+            android:variablePadding="false">
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item   android:drawable="@drawable/off_focus"/>
+                </layer-list>
+            </item>
+            <item >
+                <layer-list>
+                    <item android:drawable="@drawable/off"/>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+
+    <item
+        android:maxLevel="1">
+        <selector
+            android:constantSize="true"
+            android:variablePadding="false">
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item   android:drawable="@drawable/on_1_focus"/>
+                </layer-list>
+            </item>
+            <item >
+                <layer-list>
+                    <item android:drawable="@drawable/on_1"/>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+    <item
+        android:maxLevel="2">
+        <selector
+            android:constantSize="true"
+            android:variablePadding="false">
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item   android:drawable="@drawable/on_2_focus"/>
+                </layer-list>
+            </item>
+            <item >
+                <layer-list>
+                    <item android:drawable="@drawable/on_2"/>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+    <item
+        android:maxLevel="3">
+        <selector
+            android:constantSize="true"
+            android:variablePadding="false">
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item   android:drawable="@drawable/on_3_focus"/>
+                </layer-list>
+            </item>
+            <item >
+                <layer-list>
+                    <item android:drawable="@drawable/on_3"/>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+    <item
+        android:maxLevel="4">
+        <selector
+            android:constantSize="true"
+            android:variablePadding="false">
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item   android:drawable="@drawable/on_4_focus"/>
+                </layer-list>
+            </item>
+            <item >
+                <layer-list>
+                    <item android:drawable="@drawable/on_4"/>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+</level-list>
