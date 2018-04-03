@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Flash Called</string>
+    <string name="allow_camera_str">Allow Camera turn on Flashlight</string>
+    <string name="btn_allow">ALLOW</string>
+    <string name="btn_deny">DENY</string>
+    <string name="txt_incoming_call">Incoming Call</string>
 </resources>
