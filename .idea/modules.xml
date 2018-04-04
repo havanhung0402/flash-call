@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Flash Called.iml" filepath="$PROJECT_DIR$/Flash Called.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flash-call.iml" filepath="$PROJECT_DIR$/flash-call.iml" />
     </modules>
   </component>
 </project>
