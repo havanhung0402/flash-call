@@ -141,7 +141,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 btnPower.setEnabled(false);
             }
         }
-        //super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     @Override
