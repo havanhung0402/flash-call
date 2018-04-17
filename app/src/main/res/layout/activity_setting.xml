@@ -18,11 +18,17 @@
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
    <RelativeLayout
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="wrap_content"
        android:layout_margin="16dp"
-       app:layout_behavior="@string/appbar_scrolling_view_behavior">
+       >
        <TextView
            android:id="@+id/txtStatus"
            android:layout_width="wrap_content"
@@ -108,7 +114,7 @@
            <TextView
                android:id="@+id/txtNumOn"
                android:layout_width="wrap_content"
-               android:layout_height="32dp"
+               android:layout_height="wrap_content"
                android:layout_below="@+id/txtOn"
                android:layout_toLeftOf="@+id/txtUnitOn"
                android:text="200"/>
@@ -123,14 +129,17 @@
            <android.support.v7.widget.AppCompatSeekBar
                android:id="@+id/seekOn"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/txtNumOn"/>
+               android:layout_height="40dp"
+               android:layout_below="@+id/txtNumOn"
+               android:layout_marginTop="10dp"
+               android:max="@integer/MaxWaitingTime"/>
        </RelativeLayout>
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_below="@+id/parentOn"
-           android:id="@+id/parentOff">
+           android:id="@+id/parentOff"
+           android:layout_marginTop="0dp">
            <TextView
                android:id="@+id/txtOff"
                android:layout_width="wrap_content"
@@ -140,7 +149,7 @@
            <TextView
                android:id="@+id/txtNumOff"
                android:layout_width="wrap_content"
-               android:layout_height="32dp"
+               android:layout_height="wrap_content"
                android:layout_below="@+id/txtOff"
                android:layout_toLeftOf="@+id/txtUnitOff"
                android:text="200"/>
@@ -155,14 +164,17 @@
            <android.support.v7.widget.AppCompatSeekBar
                android:id="@+id/seekOff"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/txtNumOff"/>
+               android:layout_height="40dp"
+               android:layout_below="@+id/txtNumOff"
+               android:layout_marginTop="10dp"
+               android:max="@integer/MaxWaitingTime"/>
        </RelativeLayout>
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_below="@+id/parentOff"
-           android:id="@+id/parentBlinkSMS">
+           android:id="@+id/parentBlinkSMS"
+           android:layout_marginTop="20dp">
            <TextView
                android:id="@+id/txtBlinkSMS"
                android:layout_width="wrap_content"
@@ -172,7 +184,7 @@
            <TextView
                android:id="@+id/txtNumBlinkSMS"
                android:layout_width="wrap_content"
-               android:layout_height="32dp"
+               android:layout_height="wrap_content"
                android:layout_below="@+id/txtBlinkSMS"
                android:layout_toLeftOf="@+id/txtUnitBlinkSMS"
                android:text="200"/>
@@ -185,17 +197,24 @@
                android:layout_alignParentRight="true"
                android:text="times"/>
            <android.support.v7.widget.AppCompatSeekBar
-               android:id="@+id/seekBlinkSMS"
+               android:id="@+id/seekSMS"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/txtNumBlinkSMS"/>
+               android:layout_height="40dp"
+               android:layout_below="@+id/txtNumBlinkSMS"
+               android:layout_marginTop="10dp"
+               android:max="@integer/MaxNumberOfFlashes"
+               />
        </RelativeLayout>
+
        <ImageView
-           android:layout_width="72dp"
-           android:layout_height="72dp"
-           android:layout_alignParentBottom="true"
+           android:id="@+id/btnTest"
+           android:layout_width="84dp"
+           android:layout_height="150dp"
+           android:layout_below="@+id/parentBlinkSMS"
            android:layout_centerHorizontal="true"
            android:src="@drawable/test_buttons"
            />
+
    </RelativeLayout>
+    </ScrollView>
 </android.support.design.widget.CoordinatorLayout>

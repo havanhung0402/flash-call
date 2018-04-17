@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Build;
@@ -37,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean isOn = false;
     private boolean isRunning = false;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,13 +52,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         isFlashAvailable = getApplicationContext().getPackageManager()
                 .hasSystemFeature(PackageManager.FEATURE_CAMERA);
         SupportFlash();
-
     }
 
     private void initPermission(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            Log.i("permission", String.valueOf(ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)));
-            Log.i("isGranted", String.valueOf(PackageManager.PERMISSION_GRANTED));
+            //Log.i("permission", String.valueOf(ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)));
+           // Log.i("isGranted", String.valueOf(PackageManager.PERMISSION_GRANTED));
             if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},Util.MY_REQUESCODE_PERMISSION_CAMERA);
             }else {
@@ -66,20 +65,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 btnPower.setEnabled(true);
             }
         }
-        Log.i("init: ", "initPermission");
+        //Log.i("init: ", "initPermission");
     }
     @Override
     protected void onResume() {
         super.onResume();
 
-        Log.i("resume", "onResume");
-
+       // Log.i("resume", "onResume");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("start", "onStart");
+        //Log.i("start", "onStart");
         initPermission();
     }
 
@@ -132,12 +130,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode == Util.MY_REQUESCODE_PERMISSION_CAMERA){
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(MainActivity.this, "Permision Write File is Granted", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Permision Write File is Granted", Toast.LENGTH_SHORT).show();
                 enableCamera();
                 btnPower.setEnabled(true);
 
             }else {
-                Toast.makeText(MainActivity.this, "Permision Write File is Denied", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Permision Write File is Denied", Toast.LENGTH_SHORT).show();
                 btnPower.setEnabled(false);
             }
         }
@@ -164,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         };
                         myThread.start();
                     }
-                    Log.i("level: ", String.valueOf(level));
+                    //Log.i("level: ", String.valueOf(level));
                 } else {
                     isRunning = false;
                     level = 0;
